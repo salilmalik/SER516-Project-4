@@ -21,6 +21,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import client.constants.ClientConstants;
+import client.constants.ClientDataConstants;
 import client.services.AffectiveColorService;
 
 /**
@@ -90,17 +91,17 @@ class AffectivePerformanceMetricPanel extends JPanel implements ActionListener, 
 		JPanel performanceMetricBody = new JPanel(new GridLayout(4, 2));
 		performanceMetricBody.setBackground(ClientConstants.LIGHT_GREY);
 		focusColorDisplay = new JPanel();
-		btnFocus = new JButton(ClientConstants.FOCUS);
+		btnFocus = new JButton(ClientDataConstants.FOCUS);
 		stressColorDisplay = new JPanel();
-		btnStress = new JButton(ClientConstants.STRESS);
+		btnStress = new JButton(ClientDataConstants.STRESS);
 		interestColorDisplay = new JPanel();
-		btnInterest = new JButton(ClientConstants.INTEREST);
+		btnInterest = new JButton(ClientDataConstants.INTEREST);
 		engagementColorDisplay = new JPanel();
-		btnEngagement = new JButton(ClientConstants.ENGAGEMENT);
+		btnEngagement = new JButton(ClientDataConstants.ENGAGEMENT);
 		relaxationColorDisplay = new JPanel();
-		btnRelaxation = new JButton(ClientConstants.RELAXATION);
+		btnRelaxation = new JButton(ClientDataConstants.RELAXATION);
 		excitementColorDisplay = new JPanel();
-		btnExcitement = new JButton(ClientConstants.EXCITEMENT);
+		btnExcitement = new JButton(ClientDataConstants.EXCITEMENT);
 		performanceMetricBody
 				.add(affectivePanelComponents(focusColorDisplay, ClientConstants.FOCUS_COLOR_DEFAULT, btnFocus));
 		performanceMetricBody

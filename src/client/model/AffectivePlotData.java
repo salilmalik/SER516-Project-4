@@ -1,10 +1,10 @@
 package client.model;
 
 import java.util.ArrayList;
+
+import client.constants.ClientDataConstants;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-
-import client.constants.ClientConstants;
 
 /**
  * The AffectivePlotData class distributes and stores values into the six
@@ -22,12 +22,12 @@ public class AffectivePlotData {
 	ArrayList<FaceData> faceDataArrayList = new ArrayList<>();
 	XYSeriesCollection dataset;
 
-	XYSeries interestSeries = new XYSeries(ClientConstants.INTEREST);
-	XYSeries engagementSeries = new XYSeries(ClientConstants.ENGAGEMENT);
-	XYSeries relaxSeries = new XYSeries(ClientConstants.RELAXATION);
-	XYSeries stressSeries = new XYSeries(ClientConstants.STRESS);
-	XYSeries excitmentSeries = new XYSeries(ClientConstants.EXCITEMENT);
-	XYSeries focusSeries = new XYSeries(ClientConstants.FOCUS);
+	XYSeries interestSeries = new XYSeries(ClientDataConstants.INTEREST);
+	XYSeries engagementSeries = new XYSeries(ClientDataConstants.ENGAGEMENT);
+	XYSeries relaxSeries = new XYSeries(ClientDataConstants.RELAXATION);
+	XYSeries stressSeries = new XYSeries(ClientDataConstants.STRESS);
+	XYSeries excitmentSeries = new XYSeries(ClientDataConstants.EXCITEMENT);
+	XYSeries focusSeries = new XYSeries(ClientDataConstants.FOCUS);
 
 	private int graphLength = 50;
 
@@ -87,12 +87,12 @@ public class AffectivePlotData {
 	 * regenerateDataSet method generates next values from current values
 	 */
 	public XYSeriesCollection regenerateDataSet() {
-		XYSeries interestSeries = new XYSeries(ClientConstants.INTEREST);
-		XYSeries engagementSeries = new XYSeries(ClientConstants.ENGAGEMENT);
-		XYSeries relaxSeries = new XYSeries(ClientConstants.RELAXATION);
-		XYSeries stressSeries = new XYSeries(ClientConstants.STRESS);
-		XYSeries excitmentSeries = new XYSeries(ClientConstants.EXCITEMENT);
-		XYSeries focusSeries = new XYSeries(ClientConstants.FOCUS);
+		XYSeries interestSeries = new XYSeries(ClientDataConstants.INTEREST);
+		XYSeries engagementSeries = new XYSeries(ClientDataConstants.ENGAGEMENT);
+		XYSeries relaxSeries = new XYSeries(ClientDataConstants.RELAXATION);
+		XYSeries stressSeries = new XYSeries(ClientDataConstants.STRESS);
+		XYSeries excitmentSeries = new XYSeries(ClientDataConstants.EXCITEMENT);
+		XYSeries focusSeries = new XYSeries(ClientDataConstants.FOCUS);
 		XYSeriesCollection dataset = new XYSeriesCollection();
 		for (int i = 0; i < faceDataArrayList.size(); i++) {
 			AffectiveData affectiveData = faceDataArrayList.get(i).getAffectiveData();

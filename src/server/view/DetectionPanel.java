@@ -15,6 +15,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import server.constants.ServerConstants;
+import server.constants.ServerDataConstants;
 import server.services.DetectionListenerService;
 
 /**
@@ -89,7 +90,7 @@ public class DetectionPanel extends JPanel implements ChangeListener, ActionList
 		upperFaceLabel.setForeground(Color.WHITE);
 		upperFaceLabel.setBounds(14, 68, 139, 33);
 		this.add(upperFaceLabel);
-		String[] upperfaceItems = new String[] { ServerConstants.RAISE_BROW, ServerConstants.FURROW_BROW };
+		String[] upperfaceItems = new String[] { ServerDataConstants.RAISE_BROW, ServerDataConstants.FURROW_BROW };
 		upperfaceComboBox = new JComboBox<>(upperfaceItems);
 		upperfaceComboBox.setBounds(14, 98, 139, 25);
 		upperfaceComboBox.addActionListener(this);
@@ -112,8 +113,8 @@ public class DetectionPanel extends JPanel implements ChangeListener, ActionList
 		lowerfaceLabel.setForeground(Color.WHITE);
 		lowerfaceLabel.setBounds(250, 68, 139, 33);
 		this.add(lowerfaceLabel);
-		String[] lowerfaceItems = new String[] { ServerConstants.LAUGH, ServerConstants.CLENCH,
-				ServerConstants.SMIRK_LEFT, ServerConstants.SMIRK_RIGHT, ServerConstants.SMILE };
+		String[] lowerfaceItems = new String[] { ServerDataConstants.LAUGH, ServerDataConstants.CLENCH,
+				ServerDataConstants.SMIRK_LEFT, ServerDataConstants.SMIRK_RIGHT, ServerDataConstants.SMILE };
 		lowerfaceComboBox = new JComboBox<>(lowerfaceItems);
 		lowerfaceComboBox.setBounds(250, 98, 123, 25);
 		lowerfaceComboBox.addActionListener(this);
@@ -135,8 +136,8 @@ public class DetectionPanel extends JPanel implements ChangeListener, ActionList
 		eyeLabel.setForeground(Color.WHITE);
 		eyeLabel.setBounds(14, 134, 115, 33);
 		this.add(eyeLabel);
-		String[] eyeItems = new String[] { ServerConstants.BLINK, ServerConstants.WINK_LEFT, ServerConstants.WINK_RIGHT,
-				ServerConstants.LOOK_LEFT, ServerConstants.LOOK_RIGHT };
+		String[] eyeItems = new String[] { ServerDataConstants.BLINK, ServerDataConstants.WINK_LEFT, ServerDataConstants.WINK_RIGHT,
+				ServerDataConstants.LOOK_LEFT, ServerDataConstants.LOOK_RIGHT };
 		eyeComboBox = new JComboBox<>(eyeItems);
 		eyeComboBox.setBounds(14, 163, 139, 25);
 		eyeComboBox.addActionListener(this);
@@ -168,8 +169,8 @@ public class DetectionPanel extends JPanel implements ChangeListener, ActionList
 		performanceMetricsLabel.setForeground(Color.WHITE);
 		performanceMetricsLabel.setBounds(14, 199, 131, 33);
 		this.add(performanceMetricsLabel);
-		String[] pfMetricItems = new String[] { ServerConstants.INTEREST, ServerConstants.ENGAGEMENT,
-				ServerConstants.STRESS, ServerConstants.RELAXATION, ServerConstants.EXCITEMENT, ServerConstants.FOCUS };
+		String[] pfMetricItems = new String[] { ServerDataConstants.INTEREST, ServerDataConstants.ENGAGEMENT,
+				ServerDataConstants.STRESS, ServerDataConstants.RELAXATION, ServerDataConstants.EXCITEMENT, ServerDataConstants.FOCUS };
 		performanceMetricsComboBox = new JComboBox<>(pfMetricItems);
 		performanceMetricsComboBox.setBounds(14, 229, 139, 25);
 		performanceMetricsComboBox.addActionListener(this);

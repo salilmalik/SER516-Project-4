@@ -1,6 +1,6 @@
 package server.services;
 
-import server.constants.ServerConstants;
+import server.constants.ServerDataConstants;
 import server.listener.DetectionListenerInterface;
 import server.model.ServerModelSingleton;
 
@@ -41,15 +41,15 @@ public class DetectionListenerService implements DetectionListenerInterface {
 
 	public void changeLowerface(String exp, float val) {
 		resetLowerface();
-		if (exp.equals(ServerConstants.SMILE)) {
+		if (exp.equals(ServerDataConstants.SMILE)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setSmile(val);
-		} else if (exp.equals(ServerConstants.CLENCH)) {
+		} else if (exp.equals(ServerDataConstants.CLENCH)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setClench(val);
-		} else if (exp.equals(ServerConstants.SMIRK_LEFT)) {
+		} else if (exp.equals(ServerDataConstants.SMIRK_LEFT)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setSmirkLeft(val);
-		} else if (exp.equals(ServerConstants.SMIRK_RIGHT)) {
+		} else if (exp.equals(ServerDataConstants.SMIRK_RIGHT)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setSmirkRight(val);
-		} else if (exp.equals(ServerConstants.LAUGH)) {
+		} else if (exp.equals(ServerDataConstants.LAUGH)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setLaugh(val);
 		}
 	}
@@ -63,9 +63,9 @@ public class DetectionListenerService implements DetectionListenerInterface {
 	 */
 	public void changeUpperface(String exp, float val) {
 		resetUpperface();
-		if (exp.equals(ServerConstants.RAISE_BROW)) {
+		if (exp.equals(ServerDataConstants.RAISE_BROW)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setRaiseBrow(val);
-		} else if (exp.equals(ServerConstants.FURROW_BROW)) {
+		} else if (exp.equals(ServerDataConstants.FURROW_BROW)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setFurrowBrow(val);
 		}
 	}
@@ -78,17 +78,17 @@ public class DetectionListenerService implements DetectionListenerInterface {
 	 */
 	public void changePerformanceMatrics(String exp, float val) {
 		resetPerformanceMetrics();
-		if (exp.equals(ServerConstants.INTEREST)) {
+		if (exp.equals(ServerDataConstants.INTEREST)) {
 			ServerModelSingleton.getInstance().getFaceData().getAffectiveData().setInterest(val);
-		} else if (exp.equals(ServerConstants.ENGAGEMENT)) {
+		} else if (exp.equals(ServerDataConstants.ENGAGEMENT)) {
 			ServerModelSingleton.getInstance().getFaceData().getAffectiveData().setEngagement(val);
-		} else if (exp.equals(ServerConstants.STRESS)) {
+		} else if (exp.equals(ServerDataConstants.STRESS)) {
 			ServerModelSingleton.getInstance().getFaceData().getAffectiveData().setStress(val);
-		} else if (exp.equals(ServerConstants.RELAXATION)) {
+		} else if (exp.equals(ServerDataConstants.RELAXATION)) {
 			ServerModelSingleton.getInstance().getFaceData().getAffectiveData().setRelaxation(val);
-		} else if (exp.equals(ServerConstants.EXCITEMENT)) {
+		} else if (exp.equals(ServerDataConstants.EXCITEMENT)) {
 			ServerModelSingleton.getInstance().getFaceData().getAffectiveData().setExcitement(val);
-		} else if (exp.equals(ServerConstants.FOCUS)) {
+		} else if (exp.equals(ServerDataConstants.FOCUS)) {
 			ServerModelSingleton.getInstance().getFaceData().getAffectiveData().setFocus(val);
 		}
 	}
@@ -101,15 +101,15 @@ public class DetectionListenerService implements DetectionListenerInterface {
 	 */
 	public void changeEye(String eye) {
 		resetEye();
-		if (eye.equals(ServerConstants.BLINK)) {
+		if (eye.equals(ServerDataConstants.BLINK)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setBlink(true);
-		} else if (eye.equals(ServerConstants.WINK_LEFT)) {
+		} else if (eye.equals(ServerDataConstants.WINK_LEFT)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setWinkLeft(true);
-		} else if (eye.equals(ServerConstants.WINK_RIGHT)) {
+		} else if (eye.equals(ServerDataConstants.WINK_RIGHT)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setWinkRight(true);
-		} else if (eye.equals(ServerConstants.LOOK_LEFT)) {
+		} else if (eye.equals(ServerDataConstants.LOOK_LEFT)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setLookLeft(true);
-		} else if (eye.equals(ServerConstants.LOOK_RIGHT)) {
+		} else if (eye.equals(ServerDataConstants.LOOK_RIGHT)) {
 			ServerModelSingleton.getInstance().getFaceData().getExpressiveData().setLookRight(true);
 		}
 	}
